@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <div class="tabs">
+        <button class="tab-button" data-target="campo">Campo</button>
+        <button class="tab-button" data-target="cidade">Cidade</button>
+    </div>
+    <div id="campo" class="tabcontent">
+        <h3>Perguntas sobre o Campo</h3>
+        <div class="accordion">
+            <button class="accordion-button">Como iniciar uma horta orgânica em pequenos espaços?</button>
+            <div class="accordion-content">
+                <p>Para iniciar uma horta orgânica em pequenos espaços, escolha um local como varandas ou janelas e use recipientes como vasos e jardineiras. Plante ervas e vegetais compactos em solo orgânico bem drenado. Regue regularmente e adube com compostagem, controlando pragas de forma natural. Utilize cultivo vertical e recipientes empilháveis para otimizar o espaço e colha as plantas conforme amadurecem para estimular novas produções.</p>
+            </div>
+
+            <button class="accordion-button">Quais são as técnicas sustentáveis para o uso da água na agricultura?</button>
+            <div class="accordion-content">
+                <p>Técnicas sustentáveis para o uso da água na agricultura incluem a irrigação por gotejamento, que direciona a água diretamente às raízes; a coleta de água da chuva para irrigação; e a cobertura do solo para reter umidade e reduzir evaporação. Além disso, o reuso de água e o cultivo de plantas adaptadas ao clima local ajudam a conservar recursos hídricos e aumentar a eficiência no uso da água.
+                </p>
+            </div>
+
+            <button class="accordion-button">Como construir um galinheiro eficiente para aves de pequeno porte?</button>
+            <div class="accordion-content">
+                <p>Para construir um galinheiro eficiente para aves de pequeno porte, escolha um local seco e bem drenado, com estrutura de madeira e telhado para proteção. Garanta boa ventilação e um piso elevado coberto com material fácil de limpar. Inclua poleiros e ninhos adequados, e assegure-se de que o galinheiro seja seguro contra predadores com cercas e portas trancadas. Adicione janelas para ventilação e iluminação natural.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="cidade" class="tabcontent" style="display: none;">
+        <h3>Perguntas sobre a Cidade</h3>
+        <div class="accordion">
+            <button class="accordion-button">Como desenvolver uma política de mobilidade urbana sustentável?</button>
+            <div class="accordion-content">
+                <p>Resposta sobre como desenvolver uma política de mobilidade urbana sustentável...</p>
+            </div>
+
+            <button class="accordion-button">Quais são os impactos ambientais da urbanização descontrolada?</button>
+            <div class="accordion-content">
+                <p>Resposta sobre os impactos ambientais da urbanização descontrolada...</p>
+            </div>
+
+            <button class="accordion-button">Como melhorar a gestão de resíduos sólidos em áreas urbanas?</button>
+            <div class="accordion-content">
+                <p>Resposta sobre como melhorar a gestão de resíduos sólidos em áreas urbanas...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove("active");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.classList.add("active");
+    }
+    </script>
+       <div class="caixa">
+        <h2>Deixe seu Comentário</h2>
+        <form action="#" method="post">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="comment">Comentário:</label>
+            <textarea id="comment" name="comment" rows="4" required></textarea>
+
+            <button type="submit">Enviar Comentário</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
